@@ -1,13 +1,11 @@
 import './App.scss';
-import Home from './pages/home/Home';
-import Profile from './pages/profile/Profile';
+import Routes from './routes';
 
 function App() {
   return (
     <div className="App">
       <main>
-        {/* <Home /> */}
-        <Profile />
+        <Routes />
       </main>
     </div>
   );
