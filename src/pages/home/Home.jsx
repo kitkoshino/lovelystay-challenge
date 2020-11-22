@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../assets/logo.svg';
-import '../styles/home.scss';
+import Logo from '../../assets/logo.svg';
+import './home.scss';
 
 function Home() {
   return (
@@ -14,4 +14,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
