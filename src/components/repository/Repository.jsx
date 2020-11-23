@@ -1,13 +1,12 @@
 import React from 'react';
 import './repository.scss';
 
-function Repository({name, description}) {
+function Repository({ name, description }) {
   return (
     <div className="repository">
-      {console.log('repo comp: ', name,description)}
-      <h4>Nome do Repositorio</h4>
+      <h4>{name}</h4>
       <hr />
-      <p>descrição</p>
+      <p>{description === null ? 'sem descrição' : description}</p>
     </div>
   );
 }
