@@ -25,10 +25,10 @@ function Profile() {
   return (
     <section className="profile">
       <header>
-        <Header name={userData.name} reposQuantity={userData.public_repos}/>
+        <Header />
       </header>
       <section className="profile__info">
-        <User />
+        <User name={userData.name} reposQuantity={userData.public_repos} picture={userData.avatar_url}/>
       </section>
       <section className="profile_repositories">
         {repositories.map((repository) => (
