@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/logo.svg';
 import {findUser} from '../../services/users';
+import { useHistory } from 'react-router-dom';
 import './home.scss';
 
 function Home() {
 
+  const history = useHistory();
+
   const [user,setUser] = useState('');
 
-  function getUser(user){
+  async function getUser(user){
     console.log('click',user);
-    findUser(user);
+    await findUser(user);
+    history.push(`/profile/${user}`);
+
   }
 
   return (

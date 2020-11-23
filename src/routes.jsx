@@ -8,7 +8,7 @@ function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/profile" component={Profile} />
+        <Route path="/profile/:user" component={Profile} />
       </Switch>
     </BrowserRouter>
   );
