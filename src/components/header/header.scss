@@ -13,7 +13,35 @@
   -webkit-box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.26);
 
+  @media screen and (min-width: $small-devices) {
+    padding: 0 50px;
+  }
+
+  @media screen and (min-width: $medium-devices) {
+    padding: 0 60px;
+  }
+
+  @media screen and (min-width: $medium-devices-landscape) {
+    padding: 0 110px;
+  }
+
+  @media screen and (min-width: $large-devices) {
+    box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.26);
+    height: 100px;
+    padding: 0 300px;
+  }
+
+  @media screen and (min-width: $very-large-devices) {
+    padding: 0 500px;
+  }
+
   img {
     width: 80px;
+
+    @media screen and (min-width: $large-devices) {
+      width: 130px;
+     }
   }
 }

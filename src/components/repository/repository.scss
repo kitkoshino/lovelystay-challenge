@@ -7,9 +7,57 @@
   padding: 10px;
   margin: 10px 0;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $small-devices) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $medium-devices) {
+    display: flex;
+    align-items: center;
+    height: 70px;
+  }
+
+  @media screen and (min-width: $medium-devices-landscape) {
+    height: 80px;
+  }
+
+  @media screen and (min-width: $very-large-devices) {
+    height: 90px;
+  }
+
+
+  h4 {
+    @media screen and (min-width: $medium-devices) {
+      border-right: 2px solid $main-color;
+      padding: 10px 20px;
+    }
+
+    @media screen and (min-width: $medium-devices-landscape) {
+      font-size: 1.2rem;
+    }
+  }
+
+  p {
+    @media screen and (min-width: $medium-devices) {
+      padding: 0 20px;
+    }
+
+    @media screen and (min-width: $medium-devices-landscape) {
+      font-size: 1.1rem;
+    }
+  }
+
   hr {
     border: 1px solid $main-color;
     width: 60px;
     margin: 5px 0;
+
+    @media screen and (min-width: $medium-devices) {
+      display: none;
+    }
   }
 }

@@ -8,11 +8,48 @@
 
   .profile__info {
     margin-top: 60px;
+
+    @media screen and (min-width: $large-devices) {
+      margin-top: 100px;
+    }
   }
 
   .profile_repositories {
     background-color: $background-color;
     min-height: calc(100vh - 60px - 70px);
     padding: 15px;
+
+    @media screen and (min-width: $small-devices) {
+      padding: 15px 25px;
+      min-height: calc(100vh - 60px - 70px);
+    }
+    
+    @media screen and (min-width: $very-small-devices-landscape) {
+      min-height: fit-content;
+      padding: 15px 50px;
+    }
+
+    @media screen and (min-width: $small-devices-landscape) {
+      min-height: fit-content;
+      padding: 15px 50px;
+    }
+
+    @media screen and (min-width: $medium-devices) {
+      min-height: calc(100vh - 60px - 70px);
+      padding: 15px 60px;
+    }
+
+    @media screen and (min-width: $medium-devices-landscape) {
+      margin-top: 40px;
+      padding: 15px 110px;
+    }
+
+    @media screen and (min-width: $large-devices) {
+      padding: 20px 290px;
+    }
+
+    @media screen and (min-width: $very-large-devices) {
+      padding: 20px 480px;
+    }
   }
 }
