@@ -14,4 +14,15 @@ const findUser = async (user) => {
   
 }
 
-export {findUser};
+const listRepos = async(user) => {
+  try{
+    const result = await baseApi.get(`${user}/repos`);
+    return result.data?.map(repo => {
+      return {name: repo.name, description: repo.description, id: repo.id}
+    });
+  } catch(error) {
+    console.log(error)
+  }
+}
+
+export {findUser,listRepos};
