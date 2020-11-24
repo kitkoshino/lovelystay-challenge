@@ -14,8 +14,12 @@ function Home() {
     document.querySelector('input').focus();
   }, []);
 
-  function lowercaseUser(user) {
-    setUser(user.toLowerCase().replace(' ', ''));
+  function handleUser(event) {
+    if (event.currentTarget.value.includes(" ")) {
+      event.currentTarget.value = event.currentTarget.value.replace(' ', "");
+    }
+
+    setUser(event.currentTarget.value);
   }
 
   async function getUser(user) {
@@ -24,11 +28,12 @@ function Home() {
       await findUser(user);
       history.push(`/profile/${user}`);
     } catch (error) {
-      setErrorMessage(error);
+      setErrorMessage(error.message);
     }
   }
 
   function handleKeyPress(event) {
+
     console.log('enter')
   }
 
@@ -36,13 +41,14 @@ function Home() {
     <div className="home">
       {console.log('user', user)}
       <img src={Logo} alt="logo" />
+      
       <div className="home__search">
         <div className="home__link">
           <p>https://github.com/</p>
         </div>
         <input
           type="text"
-          onChange={(event) => lowercaseUser(event.target.value)}
+          onChange={(event) => handleUser(event)}
           onKeyPress={(event) =>handleKeyPress(event)}
           placeholder="Digite o nome do usuário (ex: sarahsmith)"
         />
@@ -50,6 +56,7 @@ function Home() {
           Search
         </button>
       </div>
+      <span>{errorMessage ? `${errorMessage}` : ''}</span>
     </div>
   );
 }
