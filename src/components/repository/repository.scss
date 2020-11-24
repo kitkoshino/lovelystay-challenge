@@ -6,6 +6,7 @@
   height: auto;
   padding: 10px;
   margin: 10px 0;
+  border-radius: 5px;
 
   &:last-child {
     margin-bottom: 0;
@@ -18,36 +19,53 @@
   @media screen and (min-width: $medium-devices) {
     display: flex;
     align-items: center;
-    height: 70px;
+    min-height: 80px;
+    height: auto;
   }
 
   @media screen and (min-width: $medium-devices-landscape) {
-    height: 80px;
+    height: auto;
   }
 
   @media screen and (min-width: $very-large-devices) {
-    height: 90px;
+    min-height: 90px;
   }
 
-
-  h4 {
+  .repository__name {
     @media screen and (min-width: $medium-devices) {
-      border-right: 2px solid $main-color;
-      padding: 10px 20px;
+      width: 200px;
     }
 
-    @media screen and (min-width: $medium-devices-landscape) {
-      font-size: 1.2rem;
+    @media screen and (min-width: $large-devices) {
+      width: 300px;
+    }
+
+    h4 {
+      word-wrap: break-word;
+      
+      @media screen and (min-width: $medium-devices) {
+        border-right: 2px solid $main-color;
+        padding: 10px 20px;
+      }
+
+      @media screen and (min-width: $medium-devices-landscape) {
+        font-size: 1.2rem;
+      }
     }
   }
 
   p {
     @media screen and (min-width: $medium-devices) {
       padding: 0 20px;
+      width: calc(100% - 200px);
     }
 
     @media screen and (min-width: $medium-devices-landscape) {
       font-size: 1.1rem;
+    }
+
+    @media screen and (min-width: $large-devices) {
+      width: calc(100% - 300px);
     }
   }
 

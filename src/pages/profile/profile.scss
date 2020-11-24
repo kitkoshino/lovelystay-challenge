@@ -2,7 +2,6 @@
 
 .profile {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -17,6 +16,7 @@
   .profile_repositories {
     background-color: $background-color;
     min-height: calc(100vh - 60px - 70px);
+    height: auto;
     padding: 15px;
 
     @media screen and (min-width: $small-devices) {
@@ -40,7 +40,6 @@
     }
 
     @media screen and (min-width: $medium-devices-landscape) {
-      margin-top: 40px;
       padding: 15px 110px;
     }
 

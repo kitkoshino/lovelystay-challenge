@@ -1,6 +1,5 @@
 import React from 'react';
 import './user.scss';
-import Foto from '../../assets/ironMan.png';
 
 function User({name, reposQuantity,picture}) {
   return (

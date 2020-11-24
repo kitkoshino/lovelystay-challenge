@@ -8,6 +8,11 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (min-width:$large-devices) {
+    padding-bottom: 90px;
+
+  }
+
   img {
     width: 80%;
 
@@ -22,6 +27,7 @@
 
     @media screen and (min-width: $large-devices) {
       width: 30%;
+
     }
   }
 

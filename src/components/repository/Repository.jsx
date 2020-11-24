@@ -4,9 +4,11 @@ import './repository.scss';
 function Repository({ name, description }) {
   return (
     <div className="repository">
-      <h4>{name}</h4>
+      <div className="repository__name">
+        <h4>{name}</h4>
+      </div>
       <hr />
-      <p>{description === null ? 'sem descrição' : description}</p>
+      <p>{description ? description : 'sem descrição'}</p>
     </div>
   );
 }

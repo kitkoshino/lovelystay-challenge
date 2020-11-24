@@ -31,6 +31,7 @@ function Profile() {
         <User name={userData.name} reposQuantity={userData.public_repos} picture={userData.avatar_url}/>
       </section>
       <section className="profile_repositories">
+        {/* <Repository /> */}
         {repositories.map((repository) => (
           <Repository key={repository.id} name={repository.name} description={repository.description}/>
         ))}
