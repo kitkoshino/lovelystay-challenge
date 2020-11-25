@@ -6,6 +6,9 @@
 
 <p align="center">Project developed for lovelystay Challenge</p>
 
+# Deploy
+- [https://find-github-usersearch.netlify.app/](https://find-github-usersearch.netlify.app/)
+
 # :pencil2: Features
 
 * Search page
@@ -59,3 +62,7 @@
     # Run application
     $ npm test
 ```
+
+# Other informations
+
+- mobile first
