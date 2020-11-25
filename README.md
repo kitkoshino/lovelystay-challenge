@@ -1,7 +1,7 @@
 # <p align="center"> Github User Search </p>
 
 <p align="center">
-<img src="./src/assets/home.jpg" width="400" />
+<img src="./src/assets/home.jpg" width="450" />
 </p>
 
 <p align="center">Project developed for lovelystay Challenge</p>
