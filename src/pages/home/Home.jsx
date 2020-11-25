@@ -15,15 +15,14 @@ function Home() {
   }, []);
 
   function handleUser(event) {
-    if (event.currentTarget.value.includes(" ")) {
-      event.currentTarget.value = event.currentTarget.value.replace(' ', "");
+    if (event.currentTarget.value.includes(' ')) {
+      event.currentTarget.value = event.currentTarget.value.replace(' ', '');
     }
 
     setUser(event.currentTarget.value);
   }
 
   async function getUser(user) {
-    console.log('click', user);
     try {
       await findUser(user);
       history.push(`/profile/${user}`);
@@ -33,15 +32,15 @@ function Home() {
   }
 
   function handleKeyPress(event) {
-
-    console.log('enter')
+    if (event.key === 'Enter') {
+      getUser(event.target.value);
+    }
   }
 
   return (
     <div className="home">
-      {console.log('user', user)}
       <img src={Logo} alt="logo" />
-      
+
       <div className="home__search">
         <div className="home__link">
           <p>https://github.com/</p>
@@ -49,8 +48,8 @@ function Home() {
         <input
           type="text"
           onChange={(event) => handleUser(event)}
-          onKeyPress={(event) =>handleKeyPress(event)}
-          placeholder="Digite o nome do usuário (ex: sarahsmith)"
+          onKeyPress={(event) => handleKeyPress(event)}
+          placeholder="Type an user name (e.g: sarahsmith)"
         />
         <button type="submit" onClick={() => getUser(user)}>
           Search

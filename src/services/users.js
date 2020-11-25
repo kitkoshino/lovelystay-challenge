@@ -30,4 +30,4 @@ const listRepos = async (user) => {
   }
 };
 
-export { findUser, listRepos };
+export { findUser, listRepos, baseApi };
