@@ -9,11 +9,13 @@
 # :pencil2: Features
 
 * Search page
+  - User can type an username to find a github profile
 * User page
-  * Picture
-  * Name
-  * Number of repositories
-  * List of repositories
+  - Github profile page with :
+    * Picture
+    * Name
+    * Number of repositories
+    * List of repositories
 
 # :rocket: Technologies
 
