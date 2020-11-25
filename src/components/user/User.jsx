@@ -5,8 +5,8 @@ function User({name, reposQuantity,picture}) {
   return (
     <div className="user">
       <div className="user__info">
-        <img src={picture} alt=""/>
-        <h3>{name}</h3>
+        <img src={picture} alt="user"/>
+        <h3 id="userName">{name}</h3>
       </div>
       <div className="user__repos">
         <span>{reposQuantity}</span>
