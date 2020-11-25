@@ -26,8 +26,7 @@
 
 # :art: Layouts
 
-* :wrench: Tools
-  * [Figma](https://www.figma.com/file/ccDh3vxrNmU9lrrzJqETVy/layout?node-id=0%3A1)
+ * [Figma](https://www.figma.com/file/ccDh3vxrNmU9lrrzJqETVy/layout?node-id=0%3A1)
 
 ### :computer: Web application
 
